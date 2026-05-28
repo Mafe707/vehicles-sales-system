@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+<div class="dashboard-layout">
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="logo-box"><i class="fa-solid fa-car-rear"></i></div>
+      <h2>Vehicle Sales</h2>
+    </div>
+    <nav class="sidebar-menu">
+      <a class="menu-item" href="dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+      <a class="menu-item" href="vehicles.html"><i class="fa-solid fa-car-side"></i><span>Vehicles</span></a>
+      <a class="menu-item" href="brands.html"><i class="fa-solid fa-tags"></i><span>Brands</span></a>
+      <a class="menu-item" href="users.html"><i class="fa-solid fa-users"></i><span>Users</span></a>
+      <a class="menu-item" href="sales.html"><i class="fa-solid fa-chart-line"></i><span>Sales</span></a>
+      <a class="menu-item" href="reports.html"><i class="fa-solid fa-chart-pie"></i><span>Reports</span></a>
+      <a class="menu-item active" href="settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+  </aside>
+  <main class="main-area">
+    <div class="topbar">
+      <div><h1>Settings</h1><p>Profile & system configuration</p></div>
+      <div class="topbar-actions">
+        <button class="secondary-btn"><i class="fa-solid fa-bell"></i></button>
+        <div class="user-profile" onclick="window.location.href='settings.html'">
+          <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+          <div class="user-info">
+            <span class="user-name">Mafe Revelo</span>
+          </div>
+        </div>
+        <button class="danger-btn" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i></button>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('profile',this)">
+        <i class="fa-solid fa-user"></i> My Profile
+      </button>
+      <button class="tab-btn" onclick="switchTab('system',this)">
+        <i class="fa-solid fa-sliders"></i> System
+      </button>
+    </div>
+
+    <div id="tab-profile" class="table-card">
+      <div class="profile-header">
+        <div class="profile-avatar-wrap">
+          <div class="profile-avatar-big" id="avatarPreview">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <label class="avatar-upload-btn" for="avatarInput">
+            <i class="fa-solid fa-camera"></i>
+          </label>
+          <input type="file" id="avatarInput" accept="image/*" style="display:none" onchange="previewAvatar(event)">
+        </div>
+        <div>
+          <h2 style="font-size:22px;font-weight:700">Mafe Revelo</h2>
+          <p style="color:#64748b;margin-top:4px">Administrator · mafe@example.com</p>
+          <span class="badge success" style="margin-top:10px;display:inline-block">Active</span>
+        </div>
+      </div>
+
+      <div class="settings-grid" style="margin-top:28px">
+        <div class="input-group">
+          <label><i class="fa-solid fa-user fa-xs"></i> Full Name</label>
+          <input type="text" value="Mafe Revelo">
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-envelope fa-xs"></i> Email</label>
+          <input type="email" value="mafe@example.com">
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-phone fa-xs"></i> Phone</label>
+          <input type="tel" value="+57 300 123 4567">
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-id-badge fa-xs"></i> Role</label>
+          <input type="text" value="Administrator" disabled>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-lock fa-xs"></i> New Password</label>
+          <div class="input-icon-wrap">
+            <input type="password" id="newPass" placeholder="••••••••">
+            <i class="fa-solid fa-eye toggle-pass" onclick="togglePass('newPass',this)"></i>
+          </div>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-lock fa-xs"></i> Confirm Password</label>
+          <div class="input-icon-wrap">
+            <input type="password" id="confPass" placeholder="••••••••">
+            <i class="fa-solid fa-eye toggle-pass" onclick="togglePass('confPass',this)"></i>
+          </div>
+        </div>
+      </div>
+      <button class="primary-btn" style="margin-top:24px;max-width:200px">
+        <i class="fa-solid fa-floppy-disk"></i> Save Profile
+      </button>
+    </div>
+
+    <div id="tab-system" class="table-card" style="display:none">
+      <div class="settings-grid">
+        <div class="input-group">
+          <label>Company Name</label>
+          <input type="text" value="Vehicle Sales System">
+        </div>
+        <div class="input-group">
+          <label>Admin Email</label>
+          <input type="email" value="admin@vehiclesales.com">
+        </div>
+        <div class="input-group">
+          <label>Currency</label>
+          <select><option>USD ($)</option><option>EUR (€)</option><option selected>COP ($)</option></select>
+        </div>
+        <div class="input-group">
+          <label>Language</label>
+          <select><option>English</option><option>Spanish</option></select>
+        </div>
+      </div>
+      <button class="primary-btn" style="margin-top:24px;max-width:200px">
+        <i class="fa-solid fa-floppy-disk"></i> Save Settings
+      </button>
+    </div>
+
+  </main>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

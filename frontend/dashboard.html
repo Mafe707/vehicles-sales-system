@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+<div class="dashboard-layout">
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="logo-box"><i class="fa-solid fa-car-rear"></i></div>
+      <h2>Vehicle Sales</h2>
+    </div>
+    <nav class="sidebar-menu">
+      <a class="menu-item active" href="dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+      <a class="menu-item" href="vehicles.html"><i class="fa-solid fa-car-side"></i><span>Vehicles</span></a>
+      <a class="menu-item" href="brands.html"><i class="fa-solid fa-tags"></i><span>Brands</span></a>
+      <a class="menu-item" href="users.html"><i class="fa-solid fa-users"></i><span>Users</span></a>
+      <a class="menu-item" href="sales.html"><i class="fa-solid fa-chart-line"></i><span>Sales</span></a>
+      <a class="menu-item" href="reports.html"><i class="fa-solid fa-chart-pie"></i><span>Reports</span></a>
+      <a class="menu-item" href="settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+  </aside>
+  <main class="main-area">
+    <div class="topbar">
+      <div><h1>Dashboard</h1><p>Welcome back, Mafe</p></div>
+      <div class="topbar-actions">
+        <button class="secondary-btn"><i class="fa-solid fa-bell"></i></button>
+        <div class="user-profile" onclick="window.location.href='settings.html'">
+          <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+          <span class="user-name">Mafe Revelo</span>
+        </div>
+        <button class="danger-btn" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i></button>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card"><h3>124</h3><p>Total Vehicles</p></div>
+      <div class="stat-card"><h3>35</h3><p>Brands</p></div>
+      <div class="stat-card"><h3>58</h3><p>Sales This Month</p></div>
+      <div class="stat-card"><h3>$520K</h3><p>Total Revenue</p></div>
+    </div>
+
+    <div class="shortcuts-grid">
+      <a class="shortcut-card" href="vehicles.html">
+        <div class="sc-top">
+          <div class="sc-icon"><i class="fa-solid fa-car-side"></i></div>
+          <i class="fa-solid fa-arrow-right sc-arrow"></i>
+        </div>
+        <span class="sc-title">Vehicles</span>
+        <p class="sc-desc">Manage your full inventory</p>
+        <div class="sc-footer">124 registered</div>
+      </a>
+      <a class="shortcut-card" href="brands.html">
+        <div class="sc-top">
+          <div class="sc-icon"><i class="fa-solid fa-tags"></i></div>
+          <i class="fa-solid fa-arrow-right sc-arrow"></i>
+        </div>
+        <span class="sc-title">Brands</span>
+        <p class="sc-desc">Vehicle manufacturers</p>
+        <div class="sc-footer">35 active brands</div>
+      </a>
+      <a class="shortcut-card" href="users.html">
+        <div class="sc-top">
+          <div class="sc-icon"><i class="fa-solid fa-users"></i></div>
+          <i class="fa-solid fa-arrow-right sc-arrow"></i>
+        </div>
+        <span class="sc-title">Users</span>
+        <p class="sc-desc">Staff & administrators</p>
+        <div class="sc-footer">8 active users</div>
+      </a>
+      <a class="shortcut-card" href="sales.html">
+        <div class="sc-top">
+          <div class="sc-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <i class="fa-solid fa-arrow-right sc-arrow"></i>
+        </div>
+        <span class="sc-title">Sales</span>
+        <p class="sc-desc">Track all transactions</p>
+        <div class="sc-footer">58 this month</div>
+      </a>
+      <a class="shortcut-card" href="reports.html">
+        <div class="sc-top">
+          <div class="sc-icon"><i class="fa-solid fa-chart-pie"></i></div>
+          <i class="fa-solid fa-arrow-right sc-arrow"></i>
+        </div>
+        <span class="sc-title">Reports</span>
+        <p class="sc-desc">Analytics & insights</p>
+        <div class="sc-footer">$520K revenue</div>
+      </a>
+      <a class="shortcut-card" href="settings.html">
+        <div class="sc-top">
+          <div class="sc-icon"><i class="fa-solid fa-gear"></i></div>
+          <i class="fa-solid fa-arrow-right sc-arrow"></i>
+        </div>
+        <span class="sc-title">Settings</span>
+        <p class="sc-desc">System configuration</p>
+        <div class="sc-footer">Profile & system</div>
+      </a>
+    </div>
+  </main>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

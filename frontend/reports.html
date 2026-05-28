@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-top">
+        <div class="logo-box"><i class="fa-solid fa-car-rear"></i></div>
+        <h2>Vehicle Sales</h2>
+    </div>
+    <nav class="sidebar-menu">
+        <a class="menu-item" href="dashboard.html">
+        <i class="fa-solid fa-house"></i><span>Dashboard</span>
+        </a>
+        <a class="menu-item" href="vehicles.html">
+        <i class="fa-solid fa-car-side"></i><span>Vehicles</span>
+        </a>
+        <a class="menu-item" href="brands.html">
+        <i class="fa-solid fa-tags"></i><span>Brands</span>
+        </a>
+        <a class="menu-item" href="users.html">
+        <i class="fa-solid fa-users"></i><span>Users</span>
+        </a>
+        <a class="menu-item" href="sales.html">
+        <i class="fa-solid fa-chart-line"></i><span>Sales</span>
+        </a>
+        <a class="menu-item active" href="reports.html">
+        <i class="fa-solid fa-chart-pie"></i><span>Reports</span>
+        </a>
+        <a class="menu-item" href="settings.html">
+        <i class="fa-solid fa-gear"></i><span>Settings</span>
+        </a>
+    </nav>
+    </aside>
+
+  <main class="main-area">
+
+   <div class="topbar">
+        <div>
+            <h1>Reports</h1>
+            <p>Performance analytics and insights</p>
+        </div>
+        <div class="topbar-actions">
+            <button class="secondary-btn"><i class="fa-solid fa-bell"></i></button>
+            <div class="user-profile" onclick="window.location.href='settings.html'">
+            <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+            <div class="user-info">
+                <span class="user-name">Mafe Revelo</span>
+            </div>
+            </div>
+            <button class="danger-btn" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i></button>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>$520K</h3>
+        <p>Total Revenue</p>
+      </div>
+      <div class="stat-card">
+        <h3>58</h3>
+        <p>Monthly Sales</p>
+      </div>
+      <div class="stat-card">
+        <h3>124</h3>
+        <p>Total Vehicles</p>
+      </div>
+      <div class="stat-card">
+        <h3>35</h3>
+        <p>Brands Registered</p>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <h2 style="margin-bottom:20px;">Sales Performance</h2>
+      <div style="
+        height:300px;
+        border-radius:20px;
+        background:linear-gradient(135deg,#2563eb,#7c3aed);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+        font-size:28px;
+        font-weight:700;
+      ">
+        <i class="fa-solid fa-chart-line" style="margin-right:14px;"></i> CHART PLACEHOLDER
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>
